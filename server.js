@@ -34,6 +34,9 @@ app.get('/', function (req, res) {
     res.send('teste');
 });
   
+intervalTimer = setInterval(() => {
+    axios.get('http://pudim.com.br')
+}, 25 * 60 * 1000);
   
 app.listen(process.env.PORT || 8080, () => {
     console.log('Ta aberto no 8080')
