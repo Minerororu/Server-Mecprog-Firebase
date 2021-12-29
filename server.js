@@ -19,6 +19,7 @@ const fireApp = initializeApp(firebaseConfig);
 const db = getFirestore(fireApp);
 
 app.post('/', function (req, res) {
+    console.log(req.body.colecao)
     const docRef = addDoc(collection(db, req.body.colecao), req.body.obj);
     console.log('Document written with ID:' + docRef.id);
     res.send('uuuuuu me acharam')
