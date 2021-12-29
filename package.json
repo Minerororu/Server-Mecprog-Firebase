@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Minerororu/Server-Mecprog-Firebase/issues"
   },
-  "homepage": "https://github.com/Minerororu/Server-Mecprog-Firebase#readme"
+  "homepage": "https://github.com/Minerororu/Server-Mecprog-Firebase#readme",
+  "dependencies": {
+    "firebase": "^9.6.1",
+    "firebase-admin": "^10.0.1"
+  }
 }
