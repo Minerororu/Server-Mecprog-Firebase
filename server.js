@@ -15,7 +15,7 @@ const firebaseConfig = {
 };
 
 app.post('/', function (req, res) {
-    const docRef = await addDoc(collection(db, req.body[0]), req.body[1]);
+    const docRef = addDoc(collection(db, req.body[0]), req.body[1]);
     console.log('Document written with ID:' + docRef.id);
 })
 
