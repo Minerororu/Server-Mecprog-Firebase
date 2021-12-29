@@ -2,6 +2,9 @@ const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, addDoc} = require('firebase/firestore/lite');
 const express = require('express');
 const app = express();
+const cors = require('cors')
+app.use(cors());
+app.use(express.json());
 const firebaseConfig = {
     apiKey: 'AIzaSyBJupSNTmCtRSlH9kQbOZwC1zXsfTC0YBI',
     authDomain: 'svg-angular.firebaseapp.com',
