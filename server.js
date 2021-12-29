@@ -1,10 +1,15 @@
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, addDoc} = require('firebase/firestore/lite');
 const express = require('express');
+var bodyParser = require('body-parser')
 const app = express();
+app.use(bodyParser.json())
 const cors = require('cors')
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 const firebaseConfig = {
     apiKey: 'AIzaSyBJupSNTmCtRSlH9kQbOZwC1zXsfTC0YBI',
     authDomain: 'svg-angular.firebaseapp.com',
