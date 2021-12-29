@@ -1,8 +1,7 @@
 const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, addDoc, setDoc, doc } = require('firebase/firestore/lite');
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const { getFirestore, collection, addDoc} = require('firebase/firestore/lite');
+const express = require('express');
+const app = express();
 const firebaseConfig = {
     apiKey: 'AIzaSyBJupSNTmCtRSlH9kQbOZwC1zXsfTC0YBI',
     authDomain: 'svg-angular.firebaseapp.com',
@@ -13,6 +12,8 @@ const firebaseConfig = {
     appId: '1:402634435212:web:f97eb51809195d654869a9',
     measurementId: 'G-TD2M0NTKC1',
 };
+const fireApp = initializeApp(firebaseConfig);
+const db = getFirestore(fireApp);
 
 app.post('/', function (req, res) {
     const docRef = addDoc(collection(db, req.body[0]), req.body[1]);

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Minerororu/Server-Mecprog-Firebase#readme",
   "dependencies": {
+    "express": "^4.17.2",
     "firebase": "^9.6.1",
     "firebase-admin": "^10.0.1"
   }
